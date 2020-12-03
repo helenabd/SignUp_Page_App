@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:signup_page_App/components/already_have_an_account.dart';
 import 'package:signup_page_App/components/rounded_button.dart';
-
 import 'package:signup_page_App/components/rounded_input_field.dart';
 import 'package:signup_page_App/components/rounded_password_field.dart';
-import 'package:signup_page_App/screens/Login/components/background.dart';
-import 'package:signup_page_App/screens/SignUp/sign_up_screen.dart';
+import 'package:signup_page_App/screens/Login/login_screen.dart';
+import 'package:signup_page_App/screens/SignUp/components/background.dart';
+import 'package:signup_page_App/screens/SignUp/components/cr_divider.dart';
+import 'package:signup_page_App/screens/SignUp/components/social_icon.dart';
 
 class Body extends StatelessWidget {
-  const Body({
-    Key key,
-    this.size,
-  }) : super(key: key);
-
-  final Size size;
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -25,18 +20,12 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'LOGIN',
+              'SIGNUP',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
             SvgPicture.asset(
-              'assets/icons/login.svg',
-              height: size.height * 0.35,
-            ),
-            SizedBox(
-              height: size.height * 0.01,
+              'assets/icons/signup.svg',
+              height: size.height * 0.32,
             ),
             RoundedInputField(
               hintText: 'Your Email',
@@ -47,23 +36,42 @@ class Body extends StatelessWidget {
               onChanged: (value) {},
             ),
             RoundedButton(
-              text: 'LOGIN',
+              text: 'SIGNUP',
               press: () {},
             ),
             SizedBox(
-              height: size.height * 0.03,
+              height: size.height * 0.02,
             ),
             AlreadyHaveAnAccountCheck(
+              login: false,
               press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return LoginScreen();
                     },
                   ),
                 );
               },
+            ),
+            OrDivider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialIcon(
+                  iconSrc: 'assets/icons/facebook.svg',
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSrc: 'assets/icons/twitter.svg',
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSrc: 'assets/icons/google-plus.svg',
+                  press: () {},
+                ),
+              ],
             )
           ],
         ),
