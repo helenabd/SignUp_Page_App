@@ -1,16 +1,25 @@
-# signup_page_App
+<h1 align="center">
+<br>
+Login Page 👋🏼
+</h1>
 
-A new Flutter project.
+<p align="center">📲 Beautiful designed Flutter App for login and register. 📲</p>
 
-## Getting Started
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-This project is a starting point for a Flutter application.
+## Screenshot 📷
+<pre>
+                      <img src="readme/welcome_screen.png" alt="Welcome Screen" height="425">        <img src="readme/signUp.gif" alt="App Gif" height="425">
+</pre>
 
-A few resources to get you started if this is your first Flutter project:
+<pre>
+                      <img src="readme/signup_screen.png" alt="SignUp Screen" height="425">        <img src="readme/login_screen.png" alt="Login Screen" height="425">
+</pre>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## License 📃
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
